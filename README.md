@@ -68,10 +68,45 @@ Insight: Understanding the regional distribution of complaints can help companie
 ![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot03.png)
 
 ## Sentiment Analysis
-![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot01.png)
+The Bing lexicon categorizes words as positive or negative, providing a straightforward sentiment analysis. The process involves tokenizing the Consumer complaint narrative, filtering out stopwords, and joining with the Bing lexicon to count the sentiments.
+
+Visualization: A bar chart visualizes the frequency of positive versus negative sentiments among the complaints. This helps to gauge the overall sentiment trend within the consumer feedback.
+```
+bing_sentiments <- complaint_tidy %>%
+  inner_join(get_sentiments("bing"), by = "word") %>%
+  count(sentiment) %>%
+  ggplot(aes(x = sentiment, y = n, fill = sentiment)) +
+  geom_col() +
+  theme_minimal() +
+  labs(x = NULL, y = "Frequency", title = "Bing Sentiment Analysis")
+```
+
 ![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot02.png)
+### NRC Sentiment Analysis
+
+The NRC lexicon provides a nuanced sentiment analysis, identifying emotions such as trust, fear, and joy. Similar to the Bing analysis, the process involves tokenizing narratives, filtering, and counting the identified sentiments.
+
+Visualization: A bar chart displays the distribution of various emotions, offering deeper insight into the emotional undertones of consumer complaints.
+
+```
+nrc_sentiments <- complaint_tidy %>%
+  inner_join(get_sentiments("nrc"), by = "word") %>%
+  count(sentiment) %>%
+  ggplot(aes(x = sentiment, y = n, fill = sentiment)) +
+  geom_col() +
+  theme_minimal() +
+  labs(x = NULL, y = "Frequency", title = "NRC Sentiment Analysis")
+```
+
+![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot01.png)
 
 ## Word Cloud
+A word cloud is generated from the Consumer complaint narrative to visualize the most frequent terms in the complaints, providing an at-a-glance view of common themes.
+
+```
+wordcloud(filtered_words, max.words = 50, scale = c(3, 0.5), random.order = FALSE, colors = brewer.pal(8, "Dark2"))
+```
+
 ![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot.png)
 
 

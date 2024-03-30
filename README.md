@@ -52,27 +52,27 @@ consumer_complaints <- consumer_complaints %>%
 ```
 ---
 ## Data Analysis 📏
+
 ### Count of Complaints by Product
 Purpose: This bar chart summarizes the total number of complaints for each product category, arranged in descending order of complaint count. It highlights which products are most problematic are debt collection and mortgage 
 
 Insight: By identifying products with the highest number of complaints, companies can pinpoint areas requiring immediate attention and improvement. This visualization aids in prioritizing customer service efforts.
 
-### Top 10 Companies by Complaint Count
-Purpose: This visualization focuses on the companies receiving the highest volumes of complaints, showcasing the top 10 with the most complaints filed against them. It's an essential analysis for understanding which companies are most frequently criticized by consumers.
-
-Insight: The chart not only reveals which companies are facing the most issues as perceived by their customers but also serves as a benchmark for performance within the industry.
+![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot05.png)
 
 ### Top 10 States by Complaint Count
 Purpose: This bar chart breaks down the complaint counts by state, showing the top 10 states where the highest numbers of complaints originate. It provides geographical insight into where consumer dissatisfaction is most concentrated.
 
 Insight: Understanding the regional distribution of complaints can help companies tailor their marketing, support, and operational strategies to address specific regional issues
+
+![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot03.png)
+
 ## Sentiment Analysis
+![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot01.png)
+![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot02.png)
+
 ## Word Cloud
+![Alt text](https://github.com/waithiran22/Consumer-Complaints-/blob/main/Images/Rplot.png)
 
 
 
-#### Something
-
-<p> Put some words in here and display a picture </p>
-
-<img src="images/trucking locations.png" height = 250, width = 400>
